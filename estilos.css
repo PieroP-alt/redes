@@ -1,0 +1,554 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202124;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8f9ff 0%,
+            #eef3ff 45%,
+            #fff5fa 100%
+        );
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado {
+    color: white;
+
+    background:
+        linear-gradient(
+            120deg,
+            #4f46e5,
+            #7c3aed,
+            #db2777
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+.encabezado::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    top: -150px;
+    right: 8%;
+}
+
+.encabezado::after {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    bottom: -100px;
+    left: 10%;
+}
+
+.encabezado-contenido {
+    position: relative;
+    z-index: 2;
+
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 65px 0 60px;
+}
+
+.subtitulo {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    margin-bottom: 15px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.encabezado h1 {
+    font-size: 46px;
+
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    font-size: 19px;
+
+    color: #ede9fe;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.menu-seccion {
+    padding: 60px 0 30px;
+}
+
+.titulo {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.titulo h2 {
+    font-size: 30px;
+
+    color: #25243a;
+
+    margin-bottom: 10px;
+}
+
+.titulo p {
+    color: #6b7280;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.menu {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.tarjeta {
+    position: relative;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border: none;
+
+    border-radius: 18px;
+
+    background: white;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    box-shadow:
+        0 8px 25px rgba(31, 41, 55, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(31, 41, 55, 0.15);
+}
+
+
+/* =========================================
+   IMÁGENES
+========================================= */
+
+.tarjeta img {
+    display: block;
+
+    width: 100%;
+
+    /*
+       Ya no recorta la imagen.
+       La imagen conserva sus proporciones.
+    */
+
+    height: 190px;
+
+    object-fit: contain;
+
+    padding: 25px;
+
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover img {
+    transform: scale(1.06);
+}
+
+
+/* Fondos de cada imagen */
+
+.facebook img {
+    background: linear-gradient(
+        135deg,
+        #e8f1ff,
+        #cfe0ff
+    );
+}
+
+.instagram img {
+    background: linear-gradient(
+        135deg,
+        #ffe4ef,
+        #fbcfe8
+    );
+}
+
+.whatsapp img {
+    background: linear-gradient(
+        135deg,
+        #dcfce7,
+        #bbf7d0
+    );
+}
+
+.youtube img {
+    background: linear-gradient(
+        135deg,
+        #ffe4e4,
+        #fecaca
+    );
+}
+
+.telegram img {
+    background: linear-gradient(
+        135deg,
+        #dff4ff,
+        #bae6fd
+    );
+}
+
+.twitter img {
+    background: linear-gradient(
+        135deg,
+        #e0f2fe,
+        #bae6fd
+    );
+}
+
+
+/* =========================================
+   PARTE INFERIOR DE LAS TARJETAS
+========================================= */
+
+.tarjeta-contenido {
+    padding: 19px 21px 21px;
+
+    border-top: 4px solid transparent;
+}
+
+.tarjeta-contenido h3 {
+    font-size: 19px;
+
+    margin-bottom: 7px;
+
+    color: #202124;
+}
+
+.tarjeta-contenido span {
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #6b7280;
+}
+
+
+/* Colores */
+
+.facebook .tarjeta-contenido {
+    border-color: #1877f2;
+}
+
+.facebook .tarjeta-contenido span {
+    color: #1877f2;
+}
+
+
+.instagram .tarjeta-contenido {
+    border-color: #e1306c;
+}
+
+.instagram .tarjeta-contenido span {
+    color: #e1306c;
+}
+
+
+.whatsapp .tarjeta-contenido {
+    border-color: #25d366;
+}
+
+.whatsapp .tarjeta-contenido span {
+    color: #16a34a;
+}
+
+
+.youtube .tarjeta-contenido {
+    border-color: #ff0000;
+}
+
+.youtube .tarjeta-contenido span {
+    color: #dc2626;
+}
+
+
+.telegram .tarjeta-contenido {
+    border-color: #229ed9;
+}
+
+.telegram .tarjeta-contenido span {
+    color: #0284c7;
+}
+
+
+.twitter .tarjeta-contenido {
+    border-color: #1da1f2;
+}
+
+.twitter .tarjeta-contenido span {
+    color: #0284c7;
+}
+
+
+/* =========================================
+   CONTENIDO DINÁMICO
+========================================= */
+
+.contenido {
+    position: relative;
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 20px;
+
+    min-height: 250px;
+
+    margin: 30px 0 70px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 10px 30px rgba(31, 41, 55, 0.08);
+}
+
+.contenido::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: #ede9fe;
+
+    top: -100px;
+    right: -60px;
+}
+
+.contenido-inicial {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    max-width: 600px;
+
+    margin: 20px auto;
+}
+
+.icono {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #8b5cf6
+        );
+
+    color: white;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.contenido h2 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.contenido p {
+    color: #6b7280;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   LISTAS DINÁMICAS
+========================================= */
+
+.contenido ul {
+    margin-top: 10px;
+
+    padding-left: 20px;
+}
+
+.contenido li {
+    margin-bottom: 8px;
+
+    color: #5f6368;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background:
+        linear-gradient(
+            120deg,
+            #312e81,
+            #4f46e5
+        );
+
+    color: white;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+footer p {
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+footer span {
+    color: #c7d2fe;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .encabezado h1 {
+        font-size: 38px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 560px) {
+
+    .encabezado-contenido {
+        padding: 50px 0;
+    }
+
+    .encabezado h1 {
+        font-size: 32px;
+    }
+
+    .descripcion {
+        font-size: 16px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta img {
+        height: 210px;
+
+        padding: 30px;
+    }
+
+    .contenido {
+        padding: 30px 20px;
+    }
+}
